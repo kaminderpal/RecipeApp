@@ -2,14 +2,25 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Query {
-    getAllRecipes : [Recipe]
+    getAllRecipes: [Recipe]
+  }
+  type Mutation {
+    addRecipe(
+      name: String!,
+      category: String!,
+      description: String!,
+      instructions: String!,
+      createdDate: String,
+      likes: Int,
+      username: String
+    ): Recipe
   }
   type Recipe {
     name: String!
     category: String!
     description: String!
     instructions: String!
-    createdDate: String!
+    createdDate: String
     likes: Int
     username: String
   }
@@ -21,6 +32,5 @@ const typeDefs = gql`
     joinDate: String
     favorites: [Recipe]
   }
-
 `;
 module.exports = typeDefs;

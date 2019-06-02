@@ -10,7 +10,7 @@ const apolloServer = new ApolloServer({
   playground: {
     endpoint: `http://localhost:5000/graphql`,
     settings: {
-      'editor.theme': 'light'
+      'editor.theme': 'dark'
     }
   }
 });

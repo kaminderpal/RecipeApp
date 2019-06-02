@@ -21,7 +21,7 @@ const ReceipeSchema = new Schema({
   },
   createdDate: {
     type: Date,
-    required: true
+    default: new Date().toISOString()
   },
   likes: {
     type: Number,
