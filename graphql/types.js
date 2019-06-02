@@ -16,6 +16,7 @@ const typeDefs = gql`
     ): Recipe
   }
   type Recipe {
+    _id : ID
     name: String!
     category: String!
     description: String!
@@ -26,6 +27,7 @@ const typeDefs = gql`
   }
 
   type User {
+    _id : ID
     username: String!
     password: String!
     email: String!
